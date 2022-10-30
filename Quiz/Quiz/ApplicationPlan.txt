@@ -1,0 +1,15 @@
+﻿1. Wyświetlić ekran powitalny (powitanie, zasady ...)
+2. Naciśnij ENTER aby zobaczyć pierwsze pytanie.
+3. Stworzyć bazę wszystkich pytań.
+4. Ustawiamy aktualną kategorię na najniższą (100 pkt).
+5. Losujemy jedno pytanie z aktualnej kategorii.
+6. Wyświetlić pytanie.
+7. Pobieramy odpowiedz od gracza
+8. Walidacja odpowiedzi gracza.
+=> ZŁA ODPOWIEDZ => 9.Plansza Error => GAME OVER
+=> DOBRA ODPOWIEDZ => 
+	9. Plansza Hurra
+	10. SPrawdzmy czy to nie była ostatnia kategoria
+	=> TAK 11. Plansza Hurra jeszcze większe => GAME OVER
+	=> NIE 11. Podnosimy kategorię na wyższą
+			12. Wracamy do pkt 5. 
