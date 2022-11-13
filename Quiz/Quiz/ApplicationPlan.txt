@@ -1,4 +1,4 @@
-﻿1. Wyświetlić ekran powitalny (powitanie, zasady ...)
+﻿1. Wyświetlić ekran powitalny (powitanie, zasady ...) => OK
 2. Naciśnij ENTER aby zobaczyć pierwsze pytanie.
 3. Stworzyć bazę wszystkich pytań.
 4. Ustawiamy aktualną kategorię na najniższą (100 pkt).
