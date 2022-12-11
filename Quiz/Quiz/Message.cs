@@ -10,6 +10,7 @@ namespace Quiz
     {
         public void DisplayWelcomeScreen()
         {
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine();
             Console.WriteLine("Witamy w Quizie gr 4");
             Console.WriteLine("Spróbuj opowiedzieć na 7 pytań");
@@ -18,5 +19,15 @@ namespace Quiz
             Console.WriteLine("Naciśnij ENTER aby rozpocząc grę ...");
             Console.ReadLine();
         }
+
+        public void DisplayFailAndGameOver()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine();
+            Console.WriteLine("NIESTETY TO NIE JEST PRAWIDŁOWA ODPOWIEDŹ ...");
+            Console.WriteLine("KONIEC GRY");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
     }
 }

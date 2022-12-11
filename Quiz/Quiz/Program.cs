@@ -1,8 +1,5 @@
 ﻿using Quiz;
 
-
-
-
 // tworzenie obiektu typu Gra
 var game = new Game();
 
@@ -15,12 +12,18 @@ message.DisplayWelcomeScreen();
 // losowanie pytania z aktualnej kategorii
 game.GetQuestion();
 
-Console.WriteLine(game.CurrentQuestion.Content);
-Console.WriteLine();
-Console.WriteLine();
+// wyświetlanie pytania i pobieranie odpowiedzi gracza
+int playerAnswer = game.CurrentQuestion.DisplayQuestion();
 
-//konstruktor
-//dalej => tworzenie bazy pytań
-// wyjaśnić namespace
+// sprawdzanie czy gracz udzielił prawidłowej odpowiedzi
+var correct = game.CheckPlayerAnswer(playerAnswer);
 
-
+// rodział logiki na dwie ścieżki w zależmości od odpowiedzi gracza
+if (correct)
+{
+    // na następnych zajęciach
+}
+else
+{
+    message.DisplayFailAndGameOver();
+}

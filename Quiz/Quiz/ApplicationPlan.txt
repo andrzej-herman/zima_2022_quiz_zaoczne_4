@@ -2,14 +2,47 @@
 2. Naciśnij ENTER aby zobaczyć pierwsze pytanie. => OK
 3. Stworzyć bazę wszystkich pytań. => OK
 4. Ustawiamy aktualną kategorię na najniższą (100 pkt). => OK
-5. Losujemy jedno pytanie z aktualnej kategorii.
-6. Wyświetlić pytanie.
-7. Pobieramy odpowiedz od gracza
-8. Walidacja odpowiedzi gracza.
-=> ZŁA ODPOWIEDZ => 9.Plansza Error => GAME OVER
+5. Losujemy jedno pytanie z aktualnej kategorii. => OK
+6. Wyświetlić pytanie. => OK
+7. Pobieramy odpowiedz od gracza => OK
+8. Walidacja odpowiedzi gracza. => OK
+=> ZŁA ODPOWIEDZ => 9.Plansza Error => GAME OVER => OK
 => DOBRA ODPOWIEDZ => 
-	9. Plansza Hurra
 	10. SPrawdzmy czy to nie była ostatnia kategoria
 	=> TAK 11. Plansza Hurra jeszcze większe => GAME OVER
 	=> NIE 11. Podnosimy kategorię na wyższą
 			12. Wracamy do pkt 5. 
+
+
+
+
+			-----------------------------------------------
+
+
+
+			var numbers = new List<int>();
+
+
+numbers.Add(45);
+numbers.Add(12);
+numbers.Add(89);
+numbers.Add(125);
+numbers.Add(6);
+numbers.Add(18);
+numbers.Add(45);
+numbers.Add(679);
+numbers.Add(52);
+
+foreach (var n in numbers)
+{
+    Console.WriteLine(n);
+}
+
+
+Console.WriteLine();
+Console.WriteLine();
+
+var sorted = numbers.FirstOrDefault(x => x > 100000);
+
+
+Console.WriteLine(sorted);
