@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,8 +16,14 @@ namespace Quiz
         public Game()
         {
             CreateQuestions();
-            CurrentCategory = 100;
             Random = new Random();
+            Categories = Questions
+                .Select(x => x.Category)
+                .Distinct()
+                .OrderBy(x => x)
+                .ToList();
+
+            CurrentCategory = Categories[CurrentCategoryIndex];
         }
 
 
@@ -24,6 +31,8 @@ namespace Quiz
         public int CurrentCategory { get; set; }
         public Random Random { get; set; }
         public Question CurrentQuestion { get; set; }
+        public List<int> Categories { get; set; }
+        public int CurrentCategoryIndex { get; set; }
 
         private void CreateQuestions()
         {
@@ -54,6 +63,21 @@ namespace Quiz
         {
             var answer = CurrentQuestion.Answers.FirstOrDefault(x => x.Order == playerNumber);
             return answer.IsCorrect;
+        }
+
+        public bool IsLastCategory()
+        {
+            // jeżeli to nie jest ostatnia kategoria, to podnosimy kategorię na następną
+            // i zwracamy false
+            if (CurrentCategoryIndex < Categories.Count - 1)
+            {
+                CurrentCategoryIndex++;
+                CurrentCategory = Categories[CurrentCategoryIndex];
+                return false;
+            }
+          
+            return true;
+            
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Quiz
 
         void ShowQuestion()
         {
+            Console.Clear();
             Console.WriteLine();
             Console.WriteLine($"Pytanie za {Category} pkt.");
             Console.WriteLine();
